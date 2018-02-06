@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nurul.id.graphvertexcolouring.C3Fragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Graph C3"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:textSize="30dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/line"
+            android:rotation="30" />
+
+        <ImageView
+            android:layout_width="240dp"
+            android:layout_height="300dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/line"
+            android:rotation="-30" />
+
+        <ImageView
+            android:layout_width="450dp"
+            android:layout_height="245dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:background="@drawable/line"
+            android:rotation="90" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/yellow" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="270dp"
+            android:background="@drawable/yellow" />
+
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="270dp"
+            android:background="@drawable/yellow" />
+    </RelativeLayout>
+</LinearLayout>

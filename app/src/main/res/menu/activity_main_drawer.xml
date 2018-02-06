@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Home" />
+        <item
+            android:id="@+id/Stage1"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Graph C3" />
+        <item
+            android:id="@+id/Stage2"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Graph C4" />
+        <item
+            android:id="@+id/Stage3"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Graph C5" />
+        <item
+            android:id="@+id/Stage4"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Graph C6" />
+        <item
+            android:id="@+id/Stage5"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Graph C7" />
+        <item
+            android:id="@+id/Stage6"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Graph C8" />
+    </group>
+</menu>
