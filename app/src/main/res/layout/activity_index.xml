@@ -30,6 +30,6 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/button1"
         android:text="About"
-        android:textColor="#FF758C"/>
+        android:textColor="#1e3c72"/>
 
 </LinearLayout>
