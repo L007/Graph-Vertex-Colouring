@@ -13,6 +13,67 @@
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="30dp" />
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Color : "
+            android:textColor="#000"
+            android:textSize="20dp"/>
+        <ImageView
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/yellow"/>
+        <ImageView
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/blue"/>
+        <ImageView
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/red"/>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="Maximum Click : 3"
+        android:textColor="#000"
+        android:layout_marginTop="5dp"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clicks Left :"
+            android:textSize="20dp"
+            android:textColor="#000"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="0"
+            android:textSize="20dp"
+            android:textColor="#000"/>
+
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"

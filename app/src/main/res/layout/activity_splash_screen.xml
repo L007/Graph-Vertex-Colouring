@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nurul.id.graphvertexcolouring.SplashScreen"
+    android:background="@drawable/bg_splash">
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="225dp"
+        android:background="@mipmap/logo_graph"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"/>
+    <ProgressBar
+        android:indeterminateTint="#FFF"
+        android:id="@+id/progressbar"
+        android:layout_gravity="center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/version"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:progressBackgroundTint="#FFF"
+        android:progressTint="#FFF"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="COPYRIGHT NURUL FKIP"
+        android:textColor="#fff"
+        android:textSize="15dp"
+        android:textAlignment="center"
+        android:layout_marginTop="80dp"/>
+
+</LinearLayout>

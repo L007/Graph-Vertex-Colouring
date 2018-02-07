@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        HomeFragment homeFragment = new HomeFragment();
+        C3Fragment c3Fragment = new C3Fragment();
         android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(R.id.fragment, homeFragment);
+        fragmentTransaction.replace(R.id.fragment, c3Fragment);
         fragmentTransaction.commit();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -65,12 +65,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.home) {
-            HomeFragment homeFragment = new HomeFragment();
-            android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.fragment, homeFragment);
-            fragmentTransaction.commit();
-        } else if (id == R.id.Stage1) {
+        if (id == R.id.Stage1) {
             C3Fragment c3Fragment = new C3Fragment();
             android.support.v4.app.FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.fragment, c3Fragment);
