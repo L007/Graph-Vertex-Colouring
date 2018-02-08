@@ -15,6 +15,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/judul"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -61,10 +62,11 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/max_click"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:text="Maximum Click : 3"
+                android:text="Maximum Click : 2"
                 android:textAlignment="center"
                 android:textColor="#000"
                 android:textSize="20dp" />
@@ -84,6 +86,7 @@
                     android:textSize="20dp" />
 
                 <TextView
+                    android:id="@+id/click_left"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
@@ -106,6 +109,7 @@
                     android:background="@drawable/rectangle" />
 
                 <ImageButton
+                    android:id="@+id/Vertex4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -113,6 +117,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
+                    android:id="@+id/Vertex3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_alignParentRight="true"
@@ -121,6 +126,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
+                    android:id="@+id/Vertex1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginLeft="20dp"
@@ -128,6 +134,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
+                    android:id="@+id/Vertex2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_alignParentRight="true"

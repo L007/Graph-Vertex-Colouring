@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Graph-Vertex-Colouring.iml" filepath="$PROJECT_DIR$/Graph-Vertex-Colouring.iml" />
+      <module fileurl="file://C:\Users\eldi\Documents\GitHub\Graph-Vertex-Colouring\Graph-Vertex-Colouring.iml" filepath="C:\Users\eldi\Documents\GitHub\Graph-Vertex-Colouring\Graph-Vertex-Colouring.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\eldi\Documents\GitHub\Graph-Vertex-Colouring\app\app.iml" filepath="C:\Users\eldi\Documents\GitHub\Graph-Vertex-Colouring\app\app.iml" />
     </modules>
   </component>
 </project>
