@@ -4,14 +4,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="nurul.id.graphvertexcolouring.C5Fragment">
+
     <TextView
-        android:layout_marginTop="20dp"
+        android:id="@+id/judul"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Graph C5"
-        android:textSize="30dp"
+        android:textAlignment="center"
         android:textColor="#000"
-        android:textAlignment="center"/>
+        android:textSize="30dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -53,7 +55,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:text="Maximum Click : 3"
+        android:text="Maximum Click : 4"
         android:textAlignment="center"
         android:textColor="#000"
         android:textSize="20dp" />
@@ -73,6 +75,7 @@
             android:textSize="20dp" />
 
         <TextView
+            android:id="@+id/click_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -127,37 +130,47 @@
             android:layout_marginTop="180dp"
             android:background="@drawable/line"
             android:rotation="90" />
+
         <ImageButton
+            android:id="@+id/Vertex4"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@drawable/yellow"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="45dp"
-            android:layout_centerHorizontal="true"/>
+            android:background="@drawable/yellow" />
+
         <ImageButton
+            android:id="@+id/Vertex5"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@drawable/yellow"
+            android:layout_marginLeft="35dp"
             android:layout_marginTop="110dp"
-            android:layout_marginLeft="35dp"/>
+            android:background="@drawable/yellow" />
+
         <ImageButton
+            android:id="@+id/Vertex3"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@drawable/yellow"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="35dp"
             android:layout_marginTop="110dp"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="35dp"/>
+            android:background="@drawable/yellow" />
+
         <ImageButton
+            android:id="@+id/Vertex1"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@drawable/yellow"
+            android:layout_marginLeft="95dp"
             android:layout_marginTop="240dp"
-            android:layout_marginLeft="95dp"/>
+            android:background="@drawable/yellow" />
+
         <ImageButton
+            android:id="@+id/Vertex2"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@drawable/yellow"
-            android:layout_marginTop="240dp"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="95dp"/>
+            android:layout_marginRight="95dp"
+            android:layout_marginTop="240dp"
+            android:background="@drawable/yellow" />
     </RelativeLayout>
 </LinearLayout>
