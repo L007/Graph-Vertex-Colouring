@@ -17,7 +17,7 @@ public class C4Fragment extends Fragment {
     ImageButton vertex1, vertex2, vertex3, vertex4;
     String warnaVertex1 = "kuning", warnaVertex2 = "kuning", warnaVertex3 = "kuning", warnaVertex4 = "kuning";
     TextView txtClick, txtStatus, txtClickLeft;
-    int click = 2, jumlahClickV1, jumlahClickV2, jumlahClickV3, jumlahClickV4;
+    int click = 2, jumlahClickV1=1, jumlahClickV2=1, jumlahClickV3=1, jumlahClickV4=1;
 
 
     public C4Fragment() {
@@ -42,9 +42,10 @@ public class C4Fragment extends Fragment {
         vertex1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // btnClick(vertex1, warnaVertex1,jumlahClickV1);
+                btnClick(vertex1, warnaVertex1,jumlahClickV1);
+                jumlahClickV1++;
 
-                if (click > 0) {
+             /*   if (click > 0) {
                     jumlahClickV1++;
                     if (jumlahClickV1 % 2 == 1) {
                         if (jumlahClickV1 % 3 == 0) {
@@ -71,9 +72,9 @@ public class C4Fragment extends Fragment {
                     txtClickLeft.setText(String.valueOf(click).toString());
                     cekGraf();
 
-                }
+                }*/
 
-                System.out.println("warna V1 "+warnaVertex1);
+
             }
         });
 
@@ -193,7 +194,7 @@ public class C4Fragment extends Fragment {
         return view;
     }
 
-/*    public void btnClick(ImageButton b, String s,int jumlah) {
+    public void btnClick(ImageButton b, String s,int jumlah) {
         if (click > 0) {
             //jumlah++;
             if (jumlah % 2 == 1) {
@@ -201,8 +202,8 @@ public class C4Fragment extends Fragment {
                     b.setBackgroundResource(R.drawable.yellow);
                     s = "kuning";
                 } else {
-                    b.setBackgroundResource(R.drawable.red);
-                    s = "merah";
+                    b.setBackgroundResource(R.drawable.blue);
+                    s = "biru";
                 }
 
             } else if (jumlah % 2 == 0) {
@@ -210,8 +211,8 @@ public class C4Fragment extends Fragment {
                     b.setBackgroundResource(R.drawable.yellow);
                     s = "kuning";
                 } else {
-                    b.setBackgroundResource(R.drawable.blue);
-                    s = "biru";
+                    b.setBackgroundResource(R.drawable.red);
+                    s = "merah";
                 }
 
             }
@@ -221,8 +222,11 @@ public class C4Fragment extends Fragment {
             txtClickLeft.setText(String.valueOf(click).toString());
             cekGraf();
 
+            System.out.println("warna V1 "+s);
+            System.out.println("click V1 "+jumlah);
+
         }
-    }*/
+    }
 
     public void cekGraf() {
         if (click == 0) {
