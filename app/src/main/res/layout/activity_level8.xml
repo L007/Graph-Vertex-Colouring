@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nurul.id.graphvertexcolouring.Level8">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/appBar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/judul"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Graph C3"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Color : "
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/yellow" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/blue" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="1dp"
+                    android:background="@drawable/red" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Maximum Click : 4"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clicks Left :"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/click_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="0"
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp">
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/line"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"/>
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/line"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:rotation="90"/>
+                <ImageView
+                    android:layout_width="115dp"
+                    android:layout_height="110dp"
+                    android:background="@mipmap/curve"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="65dp"/>
+                <ImageView
+                    android:layout_width="115dp"
+                    android:layout_height="110dp"
+                    android:background="@mipmap/curve1"
+                    android:layout_marginTop="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="65dp"/>
+                <ImageView
+                    android:layout_width="115dp"
+                    android:layout_height="110dp"
+                    android:background="@mipmap/curve"
+                    android:layout_marginTop="155dp"
+                    android:layout_marginLeft="65dp"
+                    android:rotation="-90"/>
+                <ImageView
+                    android:layout_width="115dp"
+                    android:layout_height="110dp"
+                    android:background="@mipmap/curve1"
+                    android:layout_marginTop="155dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="65dp"
+                    android:rotation="90"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/Vertex1"
+                    android:background="@drawable/yellow"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="220dp"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/Vertex2"
+                    android:background="@drawable/yellow"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginTop="125dp"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/Vertex3"
+                    android:background="@drawable/yellow"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/Vertex4"
+                    android:background="@drawable/yellow"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="125dp"/>
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:id="@+id/Vertex5"
+                    android:background="@drawable/yellow"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="125dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

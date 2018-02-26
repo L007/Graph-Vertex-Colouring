@@ -24,7 +24,7 @@ public class Index extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Index.this, About.class);
+                Intent i = new Intent(Index.this, Main2Activity.class);
                 startActivity(i);
             }
         });
