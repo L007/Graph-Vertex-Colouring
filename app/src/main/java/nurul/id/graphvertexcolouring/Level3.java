@@ -9,12 +9,13 @@ import android.widget.TextView;
 
 public class Level3 extends AppCompatActivity {
     private Toolbar toolbar;
+    final int KUNING=1,BIRU=2,MERAH=3;
     ImageButton vertex1, vertex2, vertex3, vertex4, vertex5;
-    String warnaVertex1 = "kuning", warnaVertex2 = "kuning",
-            warnaVertex3 = "kuning", warnaVertex4 = "kuning",
-            warnaVertex5 = "kuning";
+    int warnaVertex1 = 1, warnaVertex2 = 1,
+            warnaVertex3 = 1, warnaVertex4 = 1,
+            warnaVertex5 = 1;
     TextView txtClick, txtStatus, txtClickLeft;
-    int click = 4, jumlahClickV1, jumlahClickV2, jumlahClickV3, jumlahClickV4, jumlahClickV5;
+    int click = 4, jumlahClickV1=1, jumlahClickV2=1, jumlahClickV3=1, jumlahClickV4=1, jumlahClickV5=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,270 +48,165 @@ public class Level3 extends AppCompatActivity {
         vertex1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // btnClick(vertex1, warnaVertex1,jumlahClickV1);
-
-                if (click > 0) {
-                    jumlahClickV1++;
-                    if (jumlahClickV1 % 2 == 1) {
-                        if (jumlahClickV1 % 3 == 0) {
-                            vertex1.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex1 = "kuning";
-                        } else {
-                            vertex1.setBackgroundResource(R.drawable.blue);
-                            warnaVertex1 = "biru";
-                        }
-
-                    } else if (jumlahClickV1 % 2 == 0) {
-                        if (jumlahClickV1 % 3 == 0) {
-                            vertex1.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex1 = "kuning";
-                        } else {
-                            vertex1.setBackgroundResource(R.drawable.red);
-                            warnaVertex1 = "merah";
-                        }
-
-                    }
-
-
-                    click--;
-                    txtClickLeft.setText(String.valueOf(click).toString());
-                    cekGraf();
-
-                }
-
-                System.out.println("warna V1 " + warnaVertex1);
+                btnClick(vertex1,jumlahClickV1);
+                warnaVertex1++;
+                jumlahClickV1++;
+                cekGraf();
             }
         });
 
         vertex2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //btnClick(vertex2, warnaVertex2,jumlahClickV2);
-
-                if (click > 0) {
-                    jumlahClickV2++;
-                    if (jumlahClickV2 % 2 == 1) {
-                        if (jumlahClickV2 % 3 == 0) {
-                            vertex2.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex2 = "kuning";
-                        } else {
-                            vertex2.setBackgroundResource(R.drawable.blue);
-                            warnaVertex2 = "biru";
-                        }
-
-                    } else if (jumlahClickV2 % 2 == 0) {
-                        if (jumlahClickV2 % 3 == 0) {
-                            vertex2.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex2 = "kuning";
-                        } else {
-                            vertex2.setBackgroundResource(R.drawable.red);
-                            warnaVertex2 = "merah";
-                        }
-
-                    }
-
-
-                    click--;
-                    txtClickLeft.setText(String.valueOf(click).toString());
-                    cekGraf();
-
-                }
-
-                System.out.println("warna V2 " + warnaVertex2);
+                btnClick(vertex2,jumlahClickV2);
+                warnaVertex2++;
+                jumlahClickV2++;
+                cekGraf();
             }
         });
 
         vertex3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //btnClick(vertex3, warnaVertex3,jumlahClickV3);
-
-                if (click > 0) {
-                    jumlahClickV3++;
-                    if (jumlahClickV3 % 2 == 1) {
-                        if (jumlahClickV3 % 3 == 0) {
-                            vertex3.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex3 = "kuning";
-                        } else {
-                            vertex3.setBackgroundResource(R.drawable.blue);
-                            warnaVertex3 = "biru";
-                        }
-
-                    } else if (jumlahClickV3 % 2 == 0) {
-                        if (jumlahClickV3 % 3 == 0) {
-                            vertex3.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex3 = "kuning";
-                        } else {
-                            vertex3.setBackgroundResource(R.drawable.red);
-                            warnaVertex3 = "merah";
-                        }
-
-                    }
-
-
-                    click--;
-                    txtClickLeft.setText(String.valueOf(click).toString());
-                    cekGraf();
-
-                }
-                System.out.println("warna V3 " + warnaVertex3);
+                btnClick(vertex3,jumlahClickV3);
+                warnaVertex3++;
+                jumlahClickV3++;
+                cekGraf();
             }
         });
         vertex4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //btnClick(vertex4, warnaVertex4,jumlahClickV4);
-
-                if (click > 0) {
-                    jumlahClickV4++;
-                    if (jumlahClickV4 % 2 == 1) {
-                        if (jumlahClickV4 % 3 == 0) {
-                            vertex4.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex4 = "kuning";
-                        } else {
-                            vertex4.setBackgroundResource(R.drawable.blue);
-                            warnaVertex4 = "biru";
-                        }
-
-                    } else if (jumlahClickV4 % 2 == 0) {
-                        if (jumlahClickV4 % 3 == 0) {
-                            vertex4.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex4 = "kuning";
-                        } else {
-                            vertex4.setBackgroundResource(R.drawable.red);
-                            warnaVertex4 = "merah";
-                        }
-
-                    }
-
-
-                    click--;
-                    txtClickLeft.setText(String.valueOf(click).toString());
-                    cekGraf();
-
-                }
-                System.out.println("warna V4 " + warnaVertex4);
+                btnClick(vertex4,jumlahClickV4);
+                warnaVertex4++;
+                jumlahClickV4++;
+                cekGraf();
             }
         });
         vertex5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //btnClick(vertex3, warnaVertex3,jumlahClickV3);
+                btnClick(vertex5,jumlahClickV5);
+                warnaVertex5++;
+                jumlahClickV5++;
+                cekGraf();
 
-                if (click > 0) {
-                    jumlahClickV5++;
-                    if (jumlahClickV5 % 2 == 1) {
-                        if (jumlahClickV5 % 3 == 0) {
-                            vertex5.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex5 = "kuning";
-                        } else {
-                            vertex5.setBackgroundResource(R.drawable.blue);
-                            warnaVertex5 = "biru";
-                        }
-
-                    } else if (jumlahClickV5 % 2 == 0) {
-                        if (jumlahClickV5 % 3 == 0) {
-                            vertex5.setBackgroundResource(R.drawable.yellow);
-                            warnaVertex5 = "kuning";
-                        } else {
-                            vertex5.setBackgroundResource(R.drawable.red);
-                            warnaVertex5 = "merah";
-                        }
-
-                    }
-
-
-                    click--;
-                    txtClickLeft.setText(String.valueOf(click).toString());
-                    cekGraf();
-
-                }
-                System.out.println("warna V3 " + warnaVertex3);
             }
         });
         txtClickLeft.setText(String.valueOf(click).toString());
+    }
+    public void btnClick(ImageButton b,int jumlah) {
+        if (click > 0) {
+            //jumlah++;
+            if (jumlah % 2 == 1) {
+                if (jumlah % 3 == 0) {
+                    b.setBackgroundResource(R.drawable.yellow);
+
+                } else {
+                    b.setBackgroundResource(R.drawable.blue);
+
+                }
+
+            } else if (jumlah % 2 == 0) {
+                if (jumlah % 3 == 0) {
+                    b.setBackgroundResource(R.drawable.yellow);
+
+                } else {
+                    b.setBackgroundResource(R.drawable.red);
+
+                }
+
+            }
+
+
+            click--;
+            txtClickLeft.setText(String.valueOf(click).toString());
+            //cekGraf();
+
+
+        }
     }
 
     public void cekGraf() {
         if (click == 0) {
 
             if ((
-                    warnaVertex1.equalsIgnoreCase("kuning") &&
-                            warnaVertex2.equalsIgnoreCase("biru") &&
-                            warnaVertex3.equalsIgnoreCase("kuning") &&
-                            warnaVertex4.equalsIgnoreCase("biru") &&
-                            warnaVertex5.equalsIgnoreCase("merah")
+                    warnaVertex1==KUNING &&
+                            warnaVertex2==BIRU &&
+                            warnaVertex3==KUNING &&
+                            warnaVertex4==BIRU &&
+                            warnaVertex5==MERAH
             ) ||
                     (
-                            warnaVertex1.equalsIgnoreCase("biru") &&
-                                    warnaVertex2.equalsIgnoreCase("kuning") &&
-                                    warnaVertex3.equalsIgnoreCase("biru") &&
-                                    warnaVertex4.equalsIgnoreCase("kuning") &&
-                                    warnaVertex5.equalsIgnoreCase("merah")
+                            warnaVertex1==BIRU &&
+                                    warnaVertex2==KUNING &&
+                                    warnaVertex3==BIRU &&
+                                    warnaVertex4==KUNING &&
+                                    warnaVertex5==MERAH
                     )
                     ||
                     (
-                            warnaVertex1.equalsIgnoreCase("merah") &&
-                                    warnaVertex2.equalsIgnoreCase("biru") &&
-                                    warnaVertex3.equalsIgnoreCase("kuning") &&
-                                    warnaVertex4.equalsIgnoreCase("biru") &&
-                                    warnaVertex5.equalsIgnoreCase("kuning")
+                            warnaVertex1==MERAH &&
+                                    warnaVertex2==BIRU &&
+                                    warnaVertex3==KUNING &&
+                                    warnaVertex4==BIRU &&
+                                    warnaVertex5==KUNING
                     )
                     ||
                     (
-                            warnaVertex1.equalsIgnoreCase("merah") &&
-                                    warnaVertex2.equalsIgnoreCase("kuning") &&
-                                    warnaVertex3.equalsIgnoreCase("biru") &&
-                                    warnaVertex4.equalsIgnoreCase("kuning") &&
-                                    warnaVertex5.equalsIgnoreCase("biru")
+                            warnaVertex1==MERAH &&
+                                    warnaVertex2==KUNING &&
+                                    warnaVertex3==BIRU &&
+                                    warnaVertex4==KUNING &&
+                                    warnaVertex5==BIRU
                     )
                     ||
                     (
-                            warnaVertex1.equalsIgnoreCase("biru") &&
-                                    warnaVertex2.equalsIgnoreCase("merah") &&
-                                    warnaVertex3.equalsIgnoreCase("kuning") &&
-                                    warnaVertex4.equalsIgnoreCase("biru") &&
-                                    warnaVertex5.equalsIgnoreCase("kuning")
+                            warnaVertex1==BIRU &&
+                                    warnaVertex2==MERAH &&
+                                    warnaVertex3==KUNING &&
+                                    warnaVertex4==BIRU &&
+                                    warnaVertex5==KUNING
                     )
                     ||
                     (
-                            warnaVertex1.equalsIgnoreCase("kuning") &&
-                                    warnaVertex2.equalsIgnoreCase("merah") &&
-                                    warnaVertex3.equalsIgnoreCase("biru") &&
-                                    warnaVertex4.equalsIgnoreCase("kuning") &&
-                                    warnaVertex5.equalsIgnoreCase("biru")
+                            warnaVertex1==KUNING &&
+                                    warnaVertex2==MERAH &&
+                                    warnaVertex3==BIRU &&
+                                    warnaVertex4==KUNING &&
+                                    warnaVertex5==BIRU
                     )
                     ||
                     (
-                            warnaVertex1.equalsIgnoreCase("kuning") &&
-                                    warnaVertex2.equalsIgnoreCase("biru") &&
-                                    warnaVertex3.equalsIgnoreCase("merah") &&
-                                    warnaVertex4.equalsIgnoreCase("kuning") &&
-                                    warnaVertex5.equalsIgnoreCase("biru")
+                            warnaVertex1==KUNING &&
+                                    warnaVertex2==BIRU &&
+                                    warnaVertex3==MERAH &&
+                                    warnaVertex4==KUNING &&
+                                    warnaVertex5==BIRU
                     )
                     ||
                     (
-                            warnaVertex1.equalsIgnoreCase("biru") &&
-                                    warnaVertex2.equalsIgnoreCase("kuning") &&
-                                    warnaVertex3.equalsIgnoreCase("merah") &&
-                                    warnaVertex4.equalsIgnoreCase("biru") &&
-                                    warnaVertex5.equalsIgnoreCase("kuning")
+                            warnaVertex1==BIRU &&
+                                    warnaVertex2==KUNING &&
+                                    warnaVertex3==MERAH &&
+                                    warnaVertex4==BIRU &&
+                                    warnaVertex5==KUNING
                     )
                     ||
                     (
-                            warnaVertex1.equalsIgnoreCase("biru") &&
-                                    warnaVertex2.equalsIgnoreCase("kuning") &&
-                                    warnaVertex3.equalsIgnoreCase("biru") &&
-                                    warnaVertex4.equalsIgnoreCase("merah") &&
-                                    warnaVertex5.equalsIgnoreCase("kuning")
+                            warnaVertex1==BIRU &&
+                                    warnaVertex2==KUNING &&
+                                    warnaVertex3==BIRU &&
+                                    warnaVertex4==MERAH &&
+                                    warnaVertex5==KUNING
                     )
                     ||
                     (
-                            warnaVertex1.equalsIgnoreCase("kuning") &&
-                                    warnaVertex2.equalsIgnoreCase("biru") &&
-                                    warnaVertex3.equalsIgnoreCase("kuning") &&
-                                    warnaVertex4.equalsIgnoreCase("merah") &&
-                                    warnaVertex5.equalsIgnoreCase("biru")
+                            warnaVertex1==KUNING &&
+                                    warnaVertex2==BIRU &&
+                                    warnaVertex3==KUNING &&
+                                    warnaVertex4==MERAH &&
+                                    warnaVertex5==BIRU
                     )
                     ) {
                 txtStatus.setText("Awesome");
