@@ -81,9 +81,10 @@ public class C4Fragment extends Fragment {
         vertex2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //btnClick(vertex2, warnaVertex2,jumlahClickV2);
+                btnClick(vertex2, warnaVertex2,jumlahClickV2);
+                jumlahClickV2++;
 
-                if (click > 0) {
+              /*  if (click > 0) {
                     jumlahClickV2++;
                     if (jumlahClickV2 % 2 == 1) {
                         if (jumlahClickV2 % 3 == 0) {
@@ -112,7 +113,7 @@ public class C4Fragment extends Fragment {
 
                 }
 
-                System.out.println("warna V2 "+warnaVertex2);
+                System.out.println("warna V2 "+warnaVertex2);*/
             }
         });
 
