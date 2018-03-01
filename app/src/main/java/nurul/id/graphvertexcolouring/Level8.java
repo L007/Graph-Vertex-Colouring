@@ -1,9 +1,11 @@
 package nurul.id.graphvertexcolouring;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -11,12 +13,11 @@ public class Level8 extends AppCompatActivity {
     private Toolbar toolbar;
     private ImageButton vertex1, vertex2, vertex3, vertex4, vertex5;
 
-    final int KUNING=1,BIRU=2,MERAH=3;
+    final int KUNING = 1, BIRU = 2, MERAH = 3;
     int warnaVertex1 = 1, warnaVertex2 = 1,
-            warnaVertex3 = 1, warnaVertex4 = 1,warnaVertex5 = 1;
+            warnaVertex3 = 1, warnaVertex4 = 1, warnaVertex5 = 1;
     TextView txtClick, txtStatus, txtClickLeft;
-    int click = 4, jumlahClickV1=1, jumlahClickV2=1, jumlahClickV3=1, jumlahClickV4=1
-            ,jumlahClickV5=1;
+    int click = 4, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1, jumlahClickV5 = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,10 +46,11 @@ public class Level8 extends AppCompatActivity {
         txtClickLeft = (TextView) findViewById(R.id.click_left);
 
 
-        txtStatus = (TextView) findViewById(R.id.judul);vertex1.setOnClickListener(new View.OnClickListener() {
+        txtStatus = (TextView) findViewById(R.id.judul);
+        vertex1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex1,jumlahClickV1);
+                btnClick(vertex1, jumlahClickV1);
                 warnaVertex1++;
                 jumlahClickV1++;
                 cekGraf();
@@ -58,7 +60,7 @@ public class Level8 extends AppCompatActivity {
         vertex2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex2,jumlahClickV2);
+                btnClick(vertex2, jumlahClickV2);
                 warnaVertex2++;
                 jumlahClickV2++;
                 cekGraf();
@@ -68,7 +70,7 @@ public class Level8 extends AppCompatActivity {
         vertex3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex3,jumlahClickV3);
+                btnClick(vertex3, jumlahClickV3);
                 warnaVertex3++;
                 jumlahClickV3++;
                 cekGraf();
@@ -77,7 +79,7 @@ public class Level8 extends AppCompatActivity {
         vertex4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex4,jumlahClickV4);
+                btnClick(vertex4, jumlahClickV4);
                 warnaVertex4++;
                 jumlahClickV4++;
                 cekGraf();
@@ -86,7 +88,7 @@ public class Level8 extends AppCompatActivity {
         vertex5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex5,jumlahClickV5);
+                btnClick(vertex5, jumlahClickV5);
                 warnaVertex5++;
                 jumlahClickV5++;
                 cekGraf();
@@ -97,7 +99,7 @@ public class Level8 extends AppCompatActivity {
 
     }
 
-    public void btnClick(ImageButton b,int jumlah) {
+    public void btnClick(ImageButton b, int jumlah) {
         if (click > 0) {
             //jumlah++;
             if (jumlah % 2 == 1) {
@@ -128,34 +130,55 @@ public class Level8 extends AppCompatActivity {
 
         }
     }
+
     public void cekGraf() {
         if (click == 0) {
 
             if ((
-                    warnaVertex1==KUNING &&
-                            warnaVertex2==BIRU &&
-                            warnaVertex3==KUNING &&
-                            warnaVertex4==BIRU &&
-                            warnaVertex5==MERAH
+                    warnaVertex1 == KUNING &&
+                            warnaVertex2 == BIRU &&
+                            warnaVertex3 == KUNING &&
+                            warnaVertex4 == BIRU &&
+                            warnaVertex5 == MERAH
 
-            )||
+            ) ||
                     (
-                            warnaVertex1==BIRU &&
-                                    warnaVertex2==KUNING &&
-                                    warnaVertex3==BIRU &&
-                                    warnaVertex4==KUNING &&
-                                    warnaVertex5==MERAH
+                            warnaVertex1 == BIRU &&
+                                    warnaVertex2 == KUNING &&
+                                    warnaVertex3 == BIRU &&
+                                    warnaVertex4 == KUNING &&
+                                    warnaVertex5 == MERAH
                     )
                     ) {
-                txtStatus.setText("Awesome");
+//                txtStatus.setText("Awesome");
+                nextDialog();
             } else {
-                txtStatus.setText("Too much click");
+//                txtStatus.setText("Too much click");
+                retryDialog();
             }
 
 
         } /*else {
             txtStatus.setText("Too much click");
         }*/
+    }
+
+    private void nextDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Level8.this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_next, null);
+        Button dialogButton = (Button) findViewById(R.id.nextButton);
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void retryDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Level8.this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_retry, null);
+        Button dialogButton = (Button) findViewById(R.id.retryButton);
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
 }

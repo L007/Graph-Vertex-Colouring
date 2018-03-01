@@ -42,6 +42,29 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="TIME : "
+                    android:textColor="#000"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#ff0000"
+                    android:textSize="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="Color : "
                     android:textColor="#000"
                     android:textSize="20dp" />
@@ -95,55 +118,63 @@
                     android:textSize="20dp" />
 
             </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="10dp">
+
                 <ImageView
                     android:layout_width="200dp"
                     android:layout_height="150dp"
                     android:background="@drawable/line"
-                    android:rotation="90"/>
+                    android:rotation="90" />
+
                 <ImageView
-                    android:layout_marginLeft="73dp"
-                    android:layout_marginTop="73dp"
                     android:layout_width="200dp"
                     android:layout_height="140dp"
-                    android:background="@drawable/line"/>
+                    android:layout_marginLeft="73dp"
+                    android:layout_marginTop="73dp"
+                    android:background="@drawable/line" />
+
                 <ImageView
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="136dp"
                     android:layout_width="200dp"
                     android:layout_height="150dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="136dp"
                     android:background="@drawable/line"
-                    android:rotation="90"/>
+                    android:rotation="90" />
+
                 <ImageButton
                     android:id="@+id/Vertex1"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/yellow"
-                    android:layout_marginTop="45dp"/>
+                    android:layout_marginTop="45dp"
+                    android:background="@drawable/yellow" />
+
                 <ImageButton
                     android:id="@id/Vertex2"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/yellow"
+                    android:layout_marginLeft="145dp"
                     android:layout_marginTop="45dp"
-                    android:layout_marginLeft="145dp"/>
+                    android:background="@drawable/yellow" />
+
                 <ImageButton
                     android:id="@id/Vertex3"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/yellow"
+                    android:layout_marginLeft="145dp"
                     android:layout_marginTop="185dp"
-                    android:layout_marginLeft="145dp"/>
+                    android:background="@drawable/yellow" />
+
                 <ImageButton
                     android:id="@id/Vertex4"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/yellow"
+                    android:layout_alignParentRight="true"
                     android:layout_marginTop="185dp"
-                    android:layout_alignParentRight="true"/>
+                    android:background="@drawable/yellow" />
 
             </RelativeLayout>
         </LinearLayout>

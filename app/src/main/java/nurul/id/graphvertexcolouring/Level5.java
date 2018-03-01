@@ -1,9 +1,11 @@
 package nurul.id.graphvertexcolouring;
 
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -134,15 +136,34 @@ public class Level5 extends AppCompatActivity {
                                     warnaVertex4==KUNING
                     )
                     ) {
-                txtStatus.setText("Awesome");
+//                txtStatus.setText("Awesome");
+                nextDialog();
             } else {
-                txtStatus.setText("Too much click");
+//                txtStatus.setText("Too much click");
+                retryDialog();
             }
 
 
         } /*else {
             txtStatus.setText("Too much click");
         }*/
+    }
+    private void nextDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Level5.this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_next, null);
+        Button dialogButton = (Button) findViewById(R.id.nextButton);
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void retryDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Level5.this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_retry, null);
+        Button dialogButton = (Button) findViewById(R.id.retryButton);
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
 }
