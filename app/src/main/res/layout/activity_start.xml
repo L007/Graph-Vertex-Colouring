@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="nurul.id.graphvertexcolouring.Index">
+    tools:context="nurul.id.graphvertexcolouring.StartActivity">
+
     <ImageView
         android:layout_width="180dp"
         android:layout_height="205dp"
@@ -13,7 +15,7 @@
         android:background="@mipmap/logo_graph1" />
 
     <Button
-        android:id="@+id/btnStart"
+        android:id="@+id/btnMain"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_centerHorizontal="true"
@@ -22,28 +24,28 @@
         android:translationZ="10dp"
         android:drawableTop="@drawable/ic_play_arrow_black_24dp"
         android:padding="20dp"
-        android:text="Start"
+        android:text="Play"
         android:textColor="#FFF"/>
 
     <Button
-        android:drawableTop="@drawable/ic_info_outline_black_24dp"
+        android:drawableTop="@drawable/ic_book_black_24dp"
         android:padding="20dp"
-        android:id="@+id/btnAbout"
+        android:id="@+id/btnMateri"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="375dp"
         android:background="@drawable/circle_button"
         android:translationZ="10dp"
-        android:text="About"
+        android:text="Materi"
         android:textColor="#FFF"/>
 
     <Button
-        android:drawableTop="@drawable/ic_help_outline_black_24dp"
+        android:drawableTop="@drawable/ic_edit_black_24dp"
         android:padding="20dp"
-        android:text="Help"
+        android:text="SOAL"
         android:textColor="#FFF"
-        android:id="@+id/btnHelp"
+        android:id="@+id/btnSoal"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_alignParentRight="true"

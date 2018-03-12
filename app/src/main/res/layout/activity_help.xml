@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nurul.id.graphvertexcolouring.HelpActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Permainan ini menggunakan konsep pewarnaan titik pada graf.
+
+Pewarnaan titik pada graf yaitu pemberian warna pada titik graf sehingga tidak ada dua titik yang terhubung memiliki warna yang sama.
+Contohnya :
+Graf awal memiliki titik berwarna kuning. Ketika dilakukan pewarnaan, salah satu dari dua titik yang terhubung harus diberi warna yang berbeda.
+"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rectangle" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/yellow" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="100dp"
+                        android:background="@drawable/yellow" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="95dp"
+                        android:background="@drawable/yellow" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="95dp"
+                        android:background="@drawable/yellow" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rectangle" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:background="@drawable/yellow" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="100dp"
+                        android:background="@drawable/blue" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginTop="95dp"
+                        android:background="@drawable/blue" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="95dp"
+                        android:background="@drawable/yellow" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dalam setiap level terdapat keterangan Time, Color, Maksimum Clicks, dan Click Left.
+
+Time (Waktu)
+Menunjukkan batas waktu untuk menyelesaikan pewarnaan titik dalam suatu level. Ketika waktu telah habis sebelum kalian menyelesaikan pewarnaan tersebut, permainan akan terhenti.
+
+Color (Warna)
+Menunjukkan warna yang digunakan dalam mewarnai suatu graf. Pada setiap level permainan, pasti kalian akan menemukan logo warna seperti di bawah ini :
+"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/yellow" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="ATAU"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/yellow" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/blue" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/red" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ketika dalam suatu level terdapat dua warna (kuning dan biru), artinya warna yang digunakan dalam level tersebut hanya warna kuning dan biru.
+Sedangkan ketika dalam suatu level terdapat tiga warna (kuning, biru, merah), artinya warna yang digunakan dalam suatu level tersebut yaitu warna kuning, biru, dan merah. Cara mengganti warna pada suatu titik yaitu dengan cara mengklik titik tersebut dengan aturan sebagai berikut :"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/yellow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text=": Warna Awal"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text=": Satu Kali Klik"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text=": Dua Kali Klik"
+                    android:textColor="#000"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16dp"
+                android:textColor="#000"
+                android:text="Maximum Clicks (Klik Maksimum)
+Menunjukkan jumlah batas maksimum klik. Kalian hanya bisa mengklik titik pada graf sebanyak jumlah maximum clicks, selebihnya secara otomatis titik pada graf tidak dapat diklik kembali.
+
+Clicks Left (Klik yang Tersisa)
+Menunjukkan sisa dari jumlah klik maksimum. Ketika kalian menekan titik pada graf dengan satu kali klik, maka Click Left akan berkurang satu. Semakin banyak klik yang kalian gunakan, semakin sedikit klik yang kalian miliki. Apabila klik yang kalian miliki telah habis atau Click Left menunjukkan jumlah 0, maka permainan akan terhenti.
+"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

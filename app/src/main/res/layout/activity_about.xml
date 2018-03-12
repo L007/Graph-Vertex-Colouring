@@ -6,9 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="nurul.id.graphvertexcolouring.About">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tentang aplikasi,tatacara,nama,nim"/>
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar" />
 
 </LinearLayout>

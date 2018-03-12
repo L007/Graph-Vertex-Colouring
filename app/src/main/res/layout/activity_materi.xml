@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="nurul.id.graphvertexcolouring.MateriActivity">
+
+    <include
+        android:id="@+id/appBar"
+        layout="@layout/app_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="GRAF"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="30dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Sebuah graf G merupakan himpunan (V(G), E(G)), dimana V(G) adalah himpunan berhingga tak kosong dari elemen yang disebut titik, dan E(G) adalah sebuah himpunan (boleh kosong) dari pasangan tak terurut u,v dari titik-titik u,v∈V(G) yang disebut sisi. V(G) disebut himpunan titik dari G dan E(G) disebut himpunan sisi dari G (Slamin, 2009:11).
+\nBerdasarkan definisi di atas, di dalam graf, sebuah titik disebut dengan Vertex (V) dan sebuah sisi disebut dengan Edge (E). Dapat dikatakan pula bahwa sebuah graf minimal terdiri dari himpunan titik tanpa sisi.
+
+Contoh :"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/line"
+                    android:rotation="90" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="70dp"
+                    android:text="GRAF"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="80dp"
+                    android:layout_marginTop="70dp"
+                    android:text="GRAF"
+                    android:textColor="#000" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="100dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="135dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="70dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/line"
+                android:rotation="90" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32.5dp"
+                android:text="Bukan GRAF"
+                android:textColor="#000" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="PEWARNAAN TITIK"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="25dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Pewarnaan titik adalah pelabelan titik dengan memberikan warna seminimal mungkin pada titik graf yang bertetangga. Warna yang digunakan dapat berupa himpunan bilangan bulat positif, misalnya {1, 2, 3, ..., k}. Jika u dan v merupakan titik yang bertetangga ∋c(u)≠c(v) sehingga pewarnaan titik dapat dinyatakan c:V(G)→N dimana N merupakan bilangan bulat positif (Meganingtas, 2015). Bilangan bulat k yang paling minimal untuk mewarnai titik pada graf G disebut nilai kromatik, dinotasikan dengan χ(G).
+Jadi, untuk mewarnai titik pada graf tidak boleh ada dua titik yang terhubung memiliki warna yang sama dan jumlah warna yang digunakan untuk mewarnai graf tersebut harus seminimal mungkin.
+
+Contoh:
+Misal ada sebuah graf G dengan dua vertex dan satu edge seperti pada gambar di bawah
+"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/line"
+                    android:rotation="90" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Karena satu titik dengan titik yang lain terhubung, maka kedua titik tersebut harus memiliki warna yang berbeda. Sehingga salah satu titik harus diberi warna dengan warna yang lain. Pewarnaan titik pada graf tersebut dapat dilihat pada gambar di bawah ini."
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/black" />
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/line"
+                    android:rotation="90" />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/red" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

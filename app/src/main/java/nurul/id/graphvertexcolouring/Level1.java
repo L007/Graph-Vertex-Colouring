@@ -37,6 +37,9 @@ public class Level1 extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     onBackPressed();
+//                    Intent i = new Intent(Level1.this, MainActivity.class);
+//                    startActivity(i);
+                    finish();
                 }
             });
         }
@@ -184,6 +187,7 @@ public class Level1 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent i = new Intent(Level1.this, Level2.class);
                 startActivity(i);
+                finish();
             }
         });
         builder.setView(view);
@@ -194,6 +198,21 @@ public class Level1 extends AppCompatActivity {
     private void retryDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Level1.this);
         View view = getLayoutInflater().inflate(R.layout.dialog_retry, null);
+        Button dialogButton = (Button) view.findViewById(R.id.retryButton);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Level1.this, Level1.class);
+                startActivity(i);
+            }
+        });
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+    private void timeoutDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Level1.this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_time_out, null);
         Button dialogButton = (Button) view.findViewById(R.id.retryButton);
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -234,9 +253,15 @@ public class Level1 extends AppCompatActivity {
             @Override
             public void onFinish() {
                 txtTimer.setText("Time is Out");
-                retryDialog();
+                timeoutDialog();
             }
 
         }.start();
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(Level1.this, MainActivity.class);
+        startActivity(i);
     }
 }

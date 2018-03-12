@@ -15,11 +15,11 @@ import android.widget.TextView;
 
 public class Level2 extends AppCompatActivity {
     private Toolbar toolbar;
-    final int KUNING=1,BIRU=2,MERAH=3;
+    final int KUNING = 1, BIRU = 2, MERAH = 3;
     ImageButton vertex1, vertex2, vertex3, vertex4;
-    int warnaVertex1 = 1, warnaVertex2 = 1, warnaVertex3 = 1, warnaVertex4 = 1,counter=10000;
-    TextView txtClick, txtStatus, txtClickLeft,txtTimer;
-    int click = 2, jumlahClickV1=1, jumlahClickV2=1, jumlahClickV3=1, jumlahClickV4=1;
+    int warnaVertex1 = 1, warnaVertex2 = 1, warnaVertex3 = 1, warnaVertex4 = 1, counter = 10000;
+    TextView txtClick, txtStatus, txtClickLeft, txtTimer;
+    int click = 2, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1;
 
 
     SharedPreferences sharedPreferences;
@@ -38,7 +38,10 @@ public class Level2 extends AppCompatActivity {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    onBackPressed();
+//                    onBackPressed();
+                    Intent i = new Intent(Level2.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
                 }
             });
         }
@@ -56,7 +59,7 @@ public class Level2 extends AppCompatActivity {
         vertex1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex1,jumlahClickV1);
+                btnClick(vertex1, jumlahClickV1);
                 warnaVertex1++;
                 jumlahClickV1++;
                 cekGraf();
@@ -70,7 +73,7 @@ public class Level2 extends AppCompatActivity {
         vertex2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex2,jumlahClickV2);
+                btnClick(vertex2, jumlahClickV2);
                 warnaVertex2++;
                 jumlahClickV2++;
                 cekGraf();
@@ -81,7 +84,7 @@ public class Level2 extends AppCompatActivity {
         vertex3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex3,jumlahClickV3);
+                btnClick(vertex3, jumlahClickV3);
                 warnaVertex3++;
                 jumlahClickV3++;
                 cekGraf();
@@ -90,7 +93,7 @@ public class Level2 extends AppCompatActivity {
         vertex4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex4,jumlahClickV4);
+                btnClick(vertex4, jumlahClickV4);
                 warnaVertex4++;
                 jumlahClickV4++;
                 cekGraf();
@@ -100,7 +103,7 @@ public class Level2 extends AppCompatActivity {
         txtClickLeft.setText(String.valueOf(click).toString());
     }
 
-    public void btnClick(ImageButton b,int jumlah) {
+    public void btnClick(ImageButton b, int jumlah) {
         if (click > 0) {
             //jumlah++;
             if (jumlah % 2 == 1) {
@@ -136,27 +139,26 @@ public class Level2 extends AppCompatActivity {
         if (click == 0) {
 
             if ((
-                    warnaVertex1==KUNING &&
-                            warnaVertex2==BIRU &&
-                            warnaVertex3==KUNING &&
-                            warnaVertex4==BIRU
+                    warnaVertex1 == KUNING &&
+                            warnaVertex2 == BIRU &&
+                            warnaVertex3 == KUNING &&
+                            warnaVertex4 == BIRU
             ) ||
                     (
-                            warnaVertex1==BIRU &&
-                                    warnaVertex2==KUNING &&
-                                    warnaVertex3==BIRU&&
-                                    warnaVertex4==KUNING
+                            warnaVertex1 == BIRU &&
+                                    warnaVertex2 == KUNING &&
+                                    warnaVertex3 == BIRU &&
+                                    warnaVertex4 == KUNING
                     )
-                    ){
+                    ) {
                 ubahStatus();
-                boolean status = sharedPreferences.getBoolean("level_"+2,false);
-               // txtStatus.setText("Awesome");
+                boolean status = sharedPreferences.getBoolean("level_" + 2, false);
+                // txtStatus.setText("Awesome");
                 nextDialog();
 
 
-            }
-            else {
-             // txtStatus.setText("Too much click");
+            } else {
+                // txtStatus.setText("Too much click");
                 retryDialog();
             }
 
@@ -165,6 +167,7 @@ public class Level2 extends AppCompatActivity {
             txtStatus.setText("Too much click");
         }*/
     }
+
     private void nextDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Level2.this);
         View view = getLayoutInflater().inflate(R.layout.dialog_next, null);
@@ -172,8 +175,9 @@ public class Level2 extends AppCompatActivity {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Level2.this,Level3.class);
+                Intent i = new Intent(Level2.this, Level3.class);
                 startActivity(i);
+                finish();
             }
         });
         builder.setView(view);
@@ -188,7 +192,7 @@ public class Level2 extends AppCompatActivity {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Level2.this,Level2.class);
+                Intent i = new Intent(Level2.this, Level2.class);
                 startActivity(i);
             }
         });
@@ -196,26 +200,43 @@ public class Level2 extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-    private void ubahStatus(){
-        sharedPreferences = getApplicationContext().getSharedPreferences("level",0);
+
+    private void timeoutDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Level2.this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_time_out, null);
+        Button dialogButton = (Button) view.findViewById(R.id.retryButton);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Level2.this, Level2.class);
+                startActivity(i);
+            }
+        });
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void ubahStatus() {
+        sharedPreferences = getApplicationContext().getSharedPreferences("level", 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putBoolean("status_"+2,true);
-        editor.putBoolean("level_"+3,true);
+        editor.putBoolean("status_" + 2, true);
+        editor.putBoolean("level_" + 3, true);
 
 
         editor.commit();
     }
-    private void waktu(){
+
+    private void waktu() {
         new CountDownTimer(counter, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                txtTimer.setText(String.valueOf(millisUntilFinished/1000));
+                txtTimer.setText(String.valueOf(millisUntilFinished / 1000));
                 //count--;
-                if (txtStatus.getText().equals("Awesome")){
+                if (txtStatus.getText().equals("Awesome")) {
                     cancel();
-                }
-                else if(txtStatus.getText().equals("Too much click")){
+                } else if (txtStatus.getText().equals("Too much click")) {
                     cancel();
                 }
             }
@@ -223,7 +244,7 @@ public class Level2 extends AppCompatActivity {
             @Override
             public void onFinish() {
                 txtTimer.setText("Time is Out");
-                retryDialog();
+                timeoutDialog();
             }
 
         }.start();

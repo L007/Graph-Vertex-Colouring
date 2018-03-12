@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Index extends AppCompatActivity {
-    Button start,about;
+    Button start,about,help;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +16,7 @@ public class Index extends AppCompatActivity {
         start.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Index.this, MainActivity.class);
+                Intent i = new Intent(Index.this, StartActivity.class);
                 startActivity(i);
             }
         });
@@ -24,7 +24,15 @@ public class Index extends AppCompatActivity {
         about.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Index.this, Main2Activity.class);
+                Intent i = new Intent(Index.this, About.class);
+                startActivity(i);
+            }
+        });
+        help = (Button)findViewById(R.id.btnHelp);
+        help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Index.this, HelpActivity.class);
                 startActivity(i);
             }
         });

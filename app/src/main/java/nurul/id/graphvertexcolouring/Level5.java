@@ -17,11 +17,11 @@ public class Level5 extends AppCompatActivity {
     private Toolbar toolbar;
     private ImageButton vertex1, vertex2, vertex3, vertex4;
 
-    final int KUNING=1,BIRU=2,MERAH=3;
+    final int KUNING = 1, BIRU = 2, MERAH = 3;
     int warnaVertex1 = 1, warnaVertex2 = 1,
-            warnaVertex3 = 1, warnaVertex4 = 1,counter=10000;
-    TextView txtClick, txtStatus, txtClickLeft,txtTimer;
-    int click = 2, jumlahClickV1=1, jumlahClickV2=1, jumlahClickV3=1, jumlahClickV4=1;
+            warnaVertex3 = 1, warnaVertex4 = 1, counter = 10000;
+    TextView txtClick, txtStatus, txtClickLeft, txtTimer;
+    int click = 2, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1;
     SharedPreferences sharedPreferences;
 
     @Override
@@ -37,7 +37,10 @@ public class Level5 extends AppCompatActivity {
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    onBackPressed();
+//                    onBackPressed();
+                    Intent i = new Intent(Level5.this, MainActivity.class);
+                    startActivity(i);
+                    finish();
                 }
             });
         }
@@ -48,13 +51,13 @@ public class Level5 extends AppCompatActivity {
         txtClick = (TextView) findViewById(R.id.max_click);
         txtClickLeft = (TextView) findViewById(R.id.click_left);
         txtStatus = (TextView) findViewById(R.id.judul);
-        txtTimer=(TextView)findViewById(R.id.timer);
+        txtTimer = (TextView) findViewById(R.id.timer);
 
         waktu();
         vertex1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex1,jumlahClickV1);
+                btnClick(vertex1, jumlahClickV1);
                 warnaVertex1++;
                 jumlahClickV1++;
                 cekGraf();
@@ -64,7 +67,7 @@ public class Level5 extends AppCompatActivity {
         vertex2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex2,jumlahClickV2);
+                btnClick(vertex2, jumlahClickV2);
                 warnaVertex2++;
                 jumlahClickV2++;
                 cekGraf();
@@ -74,7 +77,7 @@ public class Level5 extends AppCompatActivity {
         vertex3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex3,jumlahClickV3);
+                btnClick(vertex3, jumlahClickV3);
                 warnaVertex3++;
                 jumlahClickV3++;
                 cekGraf();
@@ -83,7 +86,7 @@ public class Level5 extends AppCompatActivity {
         vertex4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                btnClick(vertex4,jumlahClickV4);
+                btnClick(vertex4, jumlahClickV4);
                 warnaVertex4++;
                 jumlahClickV4++;
                 cekGraf();
@@ -93,7 +96,7 @@ public class Level5 extends AppCompatActivity {
 
     }
 
-    public void btnClick(ImageButton b,int jumlah) {
+    public void btnClick(ImageButton b, int jumlah) {
         if (click > 0) {
             //jumlah++;
             if (jumlah % 2 == 1) {
@@ -124,21 +127,22 @@ public class Level5 extends AppCompatActivity {
 
         }
     }
+
     public void cekGraf() {
         if (click == 0) {
 
             if ((
-                    warnaVertex1==KUNING &&
-                            warnaVertex2==BIRU &&
-                            warnaVertex3==KUNING &&
-                            warnaVertex4==BIRU
+                    warnaVertex1 == KUNING &&
+                            warnaVertex2 == BIRU &&
+                            warnaVertex3 == KUNING &&
+                            warnaVertex4 == BIRU
 
             ) ||
                     (
-                            warnaVertex1==BIRU &&
-                                    warnaVertex2==KUNING &&
-                                    warnaVertex3==BIRU &&
-                                    warnaVertex4==KUNING
+                            warnaVertex1 == BIRU &&
+                                    warnaVertex2 == KUNING &&
+                                    warnaVertex3 == BIRU &&
+                                    warnaVertex4 == KUNING
                     )
                     ) {
                 ubahStatus();
@@ -154,6 +158,7 @@ public class Level5 extends AppCompatActivity {
             txtStatus.setText("Too much click");
         }*/
     }
+
     private void nextDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(Level5.this);
         View view = getLayoutInflater().inflate(R.layout.dialog_next, null);
@@ -161,8 +166,9 @@ public class Level5 extends AppCompatActivity {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Level5.this,Level6.class);
+                Intent i = new Intent(Level5.this, Level6.class);
                 startActivity(i);
+                finish();
             }
         });
         builder.setView(view);
@@ -177,7 +183,7 @@ public class Level5 extends AppCompatActivity {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Level5.this,Level5.class);
+                Intent i = new Intent(Level5.this, Level5.class);
                 startActivity(i);
             }
         });
@@ -185,26 +191,43 @@ public class Level5 extends AppCompatActivity {
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-    private void ubahStatus(){
-        sharedPreferences = getApplicationContext().getSharedPreferences("level",0);
+
+    private void timeoutDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(Level5.this);
+        View view = getLayoutInflater().inflate(R.layout.dialog_time_out, null);
+        Button dialogButton = (Button) view.findViewById(R.id.retryButton);
+        dialogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Level5.this, Level5.class);
+                startActivity(i);
+            }
+        });
+        builder.setView(view);
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
+
+    private void ubahStatus() {
+        sharedPreferences = getApplicationContext().getSharedPreferences("level", 0);
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-        editor.putBoolean("status_"+5,true);
-        editor.putBoolean("level_"+6,true);
+        editor.putBoolean("status_" + 5, true);
+        editor.putBoolean("level_" + 6, true);
 
 
         editor.commit();
     }
-    private void waktu(){
+
+    private void waktu() {
         new CountDownTimer(counter, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                txtTimer.setText(String.valueOf(millisUntilFinished/1000));
+                txtTimer.setText(String.valueOf(millisUntilFinished / 1000));
                 //count--;
-                if (txtStatus.getText().equals("Awesome")){
+                if (txtStatus.getText().equals("Awesome")) {
                     cancel();
-                }
-                else if(txtStatus.getText().equals("Too much click")){
+                } else if (txtStatus.getText().equals("Too much click")) {
                     cancel();
                 }
             }
@@ -212,7 +235,7 @@ public class Level5 extends AppCompatActivity {
             @Override
             public void onFinish() {
                 txtTimer.setText("Time is Out");
-                retryDialog();
+                timeoutDialog();
             }
 
         }.start();
