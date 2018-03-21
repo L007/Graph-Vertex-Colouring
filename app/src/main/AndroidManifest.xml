@@ -31,7 +31,6 @@
         <activity android:name=".Level9" />
         <activity android:name=".StartActivity" />
         <activity android:name=".MateriActivity" />
-        <activity android:name=".SoalActivity" />
         <activity android:name=".HelpActivity"></activity>
     </application>
 

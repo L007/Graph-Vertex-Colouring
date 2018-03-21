@@ -31,13 +31,5 @@ public class StartActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        btnSoal = (Button) findViewById(R.id.btnSoal);
-        btnSoal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(StartActivity.this, SoalActivity.class);
-                startActivity(i);
-            }
-        });
     }
 }
