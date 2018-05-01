@@ -259,8 +259,8 @@ public class Level9 extends AppCompatActivity {
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               /* Intent i = new Intent(Level9.this,Level10.class);
-                startActivity(i);*/
+                Intent i = new Intent(Level9.this,Level17.class);
+                startActivity(i);
             }
         });
         builder.setView(view);

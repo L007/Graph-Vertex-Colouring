@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="nurul.id.graphvertexcolouring.Level8">
+    tools:context=".Level17">
 
     <include
         android:id="@+id/appBar"
@@ -39,10 +39,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Broom Graph"
+                        android:text="Banana Graph"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="25dp" />
+                        android:textSize="22dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -150,117 +150,198 @@
 
 
             <RelativeLayout
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="10dp">
+                android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="280dp"
-                    android:layout_height="280dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/line" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/line"
+                    android:rotation="90" />
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
                     android:layout_centerHorizontal="true"
-                    android:background="@drawable/line"
-                    android:rotation="90"/>
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/line" />
+
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="40dp"
-                    android:layout_marginLeft="175dp"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/line"
-                    android:rotation="60"/>
+                    android:rotation="90" />
+
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_marginTop="110dp"
-                    android:layout_marginLeft="175dp"
-                    android:background="@drawable/line"
-                    android:rotation="-60"/>
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/line" />
+
                 <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:layout_marginLeft="160dp"
+                    android:layout_width="120dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="20dp"
                     android:background="@drawable/line"
-                    android:rotation="45"/>
+                    android:rotation="90" />
+
                 <ImageView
-                    android:layout_width="180dp"
-                    android:layout_height="180dp"
-                    android:layout_marginLeft="160dp"
-                    android:layout_marginTop="120dp"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="85dp"
+                    android:background="@drawable/line" />
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="65dp"
                     android:background="@drawable/line"
-                    android:rotation="-45"/>
+                    android:rotation="-45" />
+
+                <ImageView
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="65dp"
+                    android:background="@drawable/line"
+                    android:rotation="45" />
+
 
                 <ImageButton
                     android:id="@+id/Vertex1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="135dp"
-                    android:layout_marginRight="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
                     android:id="@+id/Vertex2"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="47dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
+                    android:layout_marginLeft="10dp"
                     android:id="@+id/Vertex3"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="65dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="30dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex4"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="205dp"
-                    android:layout_marginRight="30dp"
-                    android:background="@drawable/yellow" />
-                <ImageButton
-                    android:id="@+id/Vertex5"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="260dp"
-                    android:layout_marginRight="30dp"
-                    android:background="@drawable/yellow" />
-                <ImageButton
-                    android:id="@+id/Vertex6"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="135dp"
-                    android:layout_marginLeft="185dp"
-                    android:background="@drawable/yellow" />
-                <ImageButton
-                    android:id="@+id/Vertex7"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="135dp"
-                    android:layout_marginLeft="135dp"
-                    android:background="@drawable/yellow" />
-                <ImageButton
-                    android:id="@+id/Vertex8"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="135dp"
                     android:layout_marginLeft="85dp"
+                    android:id="@+id/Vertex4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex9"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="135dp"
-                    android:layout_marginLeft="35dp"
+                    android:layout_marginLeft="47dp"
+                    android:id="@+id/Vertex5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="75dp"
                     android:background="@drawable/yellow" />
 
-
+                <ImageButton
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/Vertex6"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/Vertex7"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/Vertex8"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:layout_marginLeft="205dp"
+                    android:id="@+id/Vertex9"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/Vertex10"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="75dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:id="@+id/Vertex11"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="47dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:id="@+id/Vertex12"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginRight="47dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/Vertex13"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="85dp"
+                    android:id="@+id/Vertex14"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="47dp"
+                    android:id="@+id/Vertex15"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="75dp"
+                    android:background="@drawable/yellow" />
+                <ImageButton
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/Vertex16"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="195dp"
+                    android:background="@drawable/yellow" />
             </RelativeLayout>
+
         </LinearLayout>
     </ScrollView>
 

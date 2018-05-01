@@ -39,10 +39,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Graph C3"
+                        android:text="Broom Graph"
                         android:textAlignment="center"
                         android:textColor="#000"
-                        android:textSize="30dp" />
+                        android:textSize="25dp" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -102,13 +102,20 @@
                             android:layout_marginTop="1dp"
                             android:background="@drawable/blue" />
 
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="1dp"
+                            android:background="@drawable/red" />
+
                     </LinearLayout>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Maximum Click : 1"
+                        android:text="Maximum Click : 4"
                         android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="20dp" />
@@ -138,96 +145,100 @@
 
                     </LinearLayout>
                 </LinearLayout>
+
             </LinearLayout>
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:padding="5dp">
+                android:layout_marginTop="30dp"
+                android:paddingBottom="10dp">
 
                 <ImageView
-                    android:layout_width="300dp"
-                    android:layout_height="250dp"
+                    android:layout_width="280dp"
+                    android:layout_height="280dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="50dp"
-                    android:background="@drawable/line" />
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/line"
+                    android:rotation="90" />
 
                 <ImageView
-                    android:layout_width="300dp"
-                    android:layout_height="250dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="50dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="175dp"
+                    android:layout_marginTop="40dp"
                     android:background="@drawable/line"
                     android:rotation="60" />
 
                 <ImageView
-                    android:layout_width="300dp"
-                    android:layout_height="250dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="50dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="175dp"
+                    android:layout_marginTop="110dp"
                     android:background="@drawable/line"
                     android:rotation="-60" />
 
                 <ImageButton
                     android:id="@+id/Vertex1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="250dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="135dp"
                     android:background="@drawable/yellow" />
 
                 <ImageButton
                     android:id="@+id/Vertex2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentRight="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginTop="210dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="65dp"
                     android:background="@drawable/yellow" />
 
                 <ImageButton
                     android:id="@+id/Vertex3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:layout_alignParentRight="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginTop="90dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="205dp"
                     android:background="@drawable/yellow" />
 
                 <ImageButton
                     android:id="@+id/Vertex4"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="40dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="185dp"
+                    android:layout_marginTop="135dp"
                     android:background="@drawable/yellow" />
 
                 <ImageButton
                     android:id="@+id/Vertex5"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="90dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginTop="135dp"
                     android:background="@drawable/yellow" />
 
                 <ImageButton
                     android:id="@+id/Vertex6"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginTop="210dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginTop="135dp"
                     android:background="@drawable/yellow" />
 
                 <ImageButton
                     android:id="@+id/Vertex7"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="145dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="135dp"
                     android:background="@drawable/yellow" />
+
+
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

@@ -30,7 +30,7 @@
             android:background="@drawable/circle_button"
             android:drawableTop="@drawable/ic_play_arrow_black_24dp"
             android:padding="20dp"
-            android:text="Play"
+            android:text="Mulai"
             android:textColor="#FFF"
             android:translationZ="10dp" />
 
