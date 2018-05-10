@@ -113,8 +113,29 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         lv10 = (Button) findViewById(R.id.level10);
+        lv10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, Level10.class);
+                startActivity(i);
+            }
+        });
         lv11 = (Button) findViewById(R.id.level11);
+        lv11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, Level11.class);
+                startActivity(i);
+            }
+        });
         lv12 = (Button) findViewById(R.id.level12);
+        lv12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, Level12.class);
+                startActivity(i);
+            }
+        });
         lv13 = (Button) findViewById(R.id.level13);
         lv14 = (Button) findViewById(R.id.level14);
         lv15 = (Button) findViewById(R.id.level15);
@@ -201,6 +222,13 @@ public class MainActivity extends AppCompatActivity {
             arr[i]=sharedPreferences.getBoolean("level_"+i,false);
         }
         return arr;
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(MainActivity.this, StartActivity.class);
+        startActivity(i);
+        finishAffinity();
     }
 
 

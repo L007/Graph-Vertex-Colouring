@@ -32,4 +32,11 @@ public class StartActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(StartActivity.this, Index.class);
+        startActivity(i);
+        finishAffinity();
+    }
 }

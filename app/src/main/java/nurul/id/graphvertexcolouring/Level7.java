@@ -14,14 +14,14 @@ import android.widget.TextView;
 
 public class Level7 extends AppCompatActivity {
     private Toolbar toolbar;
-    private ImageButton vertex1, vertex2, vertex3, vertex4, vertex5, vertex6, vertex7;
-
     final int KUNING = 1, BIRU = 2, MERAH = 3;
+    ImageButton vertex1, vertex2, vertex3, vertex4, vertex5, vertex6, vertex7,vertex8;
     int warnaVertex1 = 1, warnaVertex2 = 1,
-            warnaVertex3 = 1, warnaVertex4 = 1, warnaVertex5 = 1,
-            warnaVertex6 = 1, warnaVertex7 = 1, counter = 10000;
+            warnaVertex3 = 1, warnaVertex4 = 1,
+            warnaVertex5 = 1, warnaVertex6 = 1, warnaVertex7=1,warnaVertex8=1, counter = 10000;
     TextView txtClick, txtStatus, txtClickLeft, txtTimer;
-    int click = 5, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1, jumlahClickV5 = 1, jumlahClickV6 = 1, jumlahClickV7 = 1;
+    int click = 2, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1,
+            jumlahClickV5 = 1, jumlahClickV6 = 1, jumlahClickV7 = 1,jumlahClickV8=1;
     SharedPreferences sharedPreferences;
 
     @Override
@@ -51,6 +51,7 @@ public class Level7 extends AppCompatActivity {
         vertex5 = (ImageButton) findViewById(R.id.Vertex5);
         vertex6 = (ImageButton) findViewById(R.id.Vertex6);
         vertex7 = (ImageButton) findViewById(R.id.Vertex7);
+        vertex8 = (ImageButton) findViewById(R.id.Vertex8);
         txtClick = (TextView) findViewById(R.id.max_click);
         txtClickLeft = (TextView) findViewById(R.id.click_left);
         txtStatus = (TextView) findViewById(R.id.judul);
@@ -122,6 +123,15 @@ public class Level7 extends AppCompatActivity {
                 cekGraf();
             }
         });
+        vertex8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnClick(vertex8, jumlahClickV8);
+                warnaVertex8++;
+                jumlahClickV8++;
+                cekGraf();
+            }
+        });
         txtClickLeft.setText(String.valueOf(click).toString());
 
     }
@@ -167,25 +177,17 @@ public class Level7 extends AppCompatActivity {
                             warnaVertex3 == KUNING &&
                             warnaVertex4 == BIRU &&
                             warnaVertex5 == KUNING &&
-                            warnaVertex6 == BIRU &&
-                            warnaVertex7 == MERAH
+                            warnaVertex6 == KUNING &&
+                            warnaVertex7 == KUNING&&
+                            warnaVertex8 == KUNING
 
-            ) ||
-                    (
-                            warnaVertex1 == BIRU &&
-                                    warnaVertex2 == KUNING &&
-                                    warnaVertex3 == BIRU &&
-                                    warnaVertex4 == KUNING &&
-                                    warnaVertex5 == BIRU &&
-                                    warnaVertex6 == KUNING &&
-                                    warnaVertex7 == MERAH
-                    )
+            )
                     ) {
-//                txtStatus.setText("Awesome");
+                txtStatus.setText("Awesome");
                 nextDialog();
             } else {
                 ubahStatus();
-//                txtStatus.setText("Too much click");
+                txtStatus.setText("Too much click");
                 retryDialog();
             }
 
@@ -272,9 +274,16 @@ public class Level7 extends AppCompatActivity {
             public void onFinish() {
                 txtTimer.setText("Time is Out");
                 timeoutDialog();
+                cancel();
             }
 
         }.start();
+    }
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(Level7.this, MainActivity.class);
+        startActivity(i);
+        finish();
     }
 
 }
