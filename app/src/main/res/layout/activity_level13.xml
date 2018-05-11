@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -153,7 +152,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="50dp">
+                android:layout_marginTop="30dp">
 
                 <ImageView
                     android:layout_width="130dp"
@@ -196,8 +195,8 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_marginTop="185dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:layout_marginTop="245dp"
                     android:background="@drawable/line" />
 
 
@@ -226,6 +225,7 @@
                     android:layout_marginRight="75dp"
                     android:layout_marginTop="100dp"
                     android:background="@drawable/yellow" />\
+
                 <ImageButton
                     android:id="@+id/Vertex4"
                     android:layout_width="30dp"
@@ -233,6 +233,7 @@
                     android:layout_marginLeft="75dp"
                     android:layout_marginTop="190dp"
                     android:background="@drawable/yellow" />
+
                 <ImageButton
                     android:id="@+id/Vertex5"
                     android:layout_width="30dp"
@@ -240,19 +241,21 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="245dp"
                     android:background="@drawable/yellow" />
+
                 <ImageButton
                     android:id="@+id/Vertex6"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="75dp"
+                    android:layout_marginLeft="120dp"
                     android:layout_marginTop="245dp"
                     android:background="@drawable/yellow" />
+
                 <ImageButton
                     android:id="@+id/Vertex7"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginLeft="120dp"
-                    android:layout_marginTop="245dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="300dp"
                     android:background="@drawable/yellow" />
             </RelativeLayout>
 
