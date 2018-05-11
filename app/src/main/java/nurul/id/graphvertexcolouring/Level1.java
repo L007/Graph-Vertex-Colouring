@@ -13,11 +13,11 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Level1 extends AppCompatActivity {
-    ImageButton vertex1, vertex2, vertex3;
+    ImageButton vertex1, vertex2, vertex3,vertex4;
     final int KUNING = 1, BIRU = 2, MERAH = 3;
-    int warnaVertex1 = 1, warnaVertex2 = 1, warnaVertex3 = 1;
+    int warnaVertex1 = 1, warnaVertex2 = 1, warnaVertex3 = 1,warnaVertex4 = 1;
     TextView txtClick, txtStatus, txtClickLeft, txtTimer;
-    int click = 3, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1;
+    int click = 2, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1,jumlahClickV4 = 1;
     Toolbar toolbar;
     private int count = 10;
     private int counter = 10000;
@@ -46,6 +46,7 @@ public class Level1 extends AppCompatActivity {
         vertex1 = (ImageButton) findViewById(R.id.Vertex1);
         vertex2 = (ImageButton) findViewById(R.id.Vertex2);
         vertex3 = (ImageButton) findViewById(R.id.Vertex3);
+        vertex4 = (ImageButton) findViewById(R.id.Vertex4);
 
         txtClick = (TextView) findViewById(R.id.max_click);
         txtClickLeft = (TextView) findViewById(R.id.click_left);
@@ -82,6 +83,16 @@ public class Level1 extends AppCompatActivity {
                 btnClick(vertex3, jumlahClickV3);
                 warnaVertex3++;
                 jumlahClickV3++;
+                cekGraf();
+            }
+        });
+
+        vertex4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnClick(vertex4, jumlahClickV4);
+                warnaVertex4++;
+                jumlahClickV4++;
                 cekGraf();
             }
         });
@@ -125,52 +136,26 @@ public class Level1 extends AppCompatActivity {
         if (click == 0) {
 
             if ((
-                    warnaVertex1 == MERAH &&
-                            warnaVertex2 == KUNING &&
-                            warnaVertex3 == BIRU
-
+                    warnaVertex1 == KUNING &&
+                            warnaVertex2 == BIRU &&
+                            warnaVertex3 == KUNING &&
+                            warnaVertex4 == BIRU
             ) ||
-                    (
-                            warnaVertex1 == MERAH &&
-                                    warnaVertex2 == BIRU &&
-                                    warnaVertex3 == KUNING
-
-                    )
-                    ||
-                    (
-                            warnaVertex1 == KUNING &&
-                                    warnaVertex2 == MERAH &&
-                                    warnaVertex3 == BIRU
-
-                    )
-                    ||
-                    (
-                            warnaVertex1 == KUNING &&
-                                    warnaVertex2 == BIRU &&
-                                    warnaVertex3 == MERAH
-
-                    )
-                    ||
-                    (
-                            warnaVertex1 == BIRU &&
-                                    warnaVertex2 == MERAH &&
-                                    warnaVertex3 == KUNING
-
-                    )
-                    ||
                     (
                             warnaVertex1 == BIRU &&
                                     warnaVertex2 == KUNING &&
-                                    warnaVertex3 == MERAH
+                                    warnaVertex3 == BIRU&&
+                                    warnaVertex4 == KUNING
 
                     )
+
                     ) {
                 ubahStatus();
                 nextDialog();
-               // txtStatus.setText("Awesome");
+                txtStatus.setText("Awesome");
 
             } else {
-                //txtStatus.setText("Too much click");
+                txtStatus.setText("Too much click");
                 retryDialog();
             }
 
@@ -254,6 +239,7 @@ public class Level1 extends AppCompatActivity {
             public void onFinish() {
                 txtTimer.setText("Time is Out");
                 timeoutDialog();
+                cancel();
             }
 
         }.start();
@@ -263,5 +249,6 @@ public class Level1 extends AppCompatActivity {
     public void onBackPressed() {
         Intent i = new Intent(Level1.this, MainActivity.class);
         startActivity(i);
+        finish();
     }
 }

@@ -116,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Maximum Click : 2"
+                        android:text="Maximum Click : 4"
                         android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="20dp" />

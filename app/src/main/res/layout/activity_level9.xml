@@ -116,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Maximum Click : 3"
+                        android:text="Maximum Click : 4"
                         android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="20dp" />
@@ -177,7 +177,7 @@
 
                 <ImageButton
                     android:layout_marginLeft="50dp"
-                    android:id="@+id/Vertex3"
+                    android:id="@+id/Vertex1"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="30dp"
@@ -192,7 +192,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex1"
+                    android:id="@+id/Vertex3"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="115dp"
@@ -201,14 +201,14 @@
                 <ImageButton
                     android:layout_alignParentRight="true"
                     android:layout_marginRight="50dp"
-                    android:id="@+id/Vertex4"
+                    android:id="@+id/Vertex7"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex5"
+                    android:id="@+id/Vertex6"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginRight="80dp"
@@ -217,7 +217,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex6"
+                    android:id="@+id/Vertex5"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginRight="115dp"
@@ -225,7 +225,7 @@
                     android:layout_marginTop="145dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex7"
+                    android:id="@+id/Vertex4"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="210dp"

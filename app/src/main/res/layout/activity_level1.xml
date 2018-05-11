@@ -116,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Maximum Click : 3"
+                        android:text="Maximum Click : 2"
                         android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="20dp" />
@@ -183,7 +183,7 @@
                     android:layout_marginTop="50dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex2"
+                    android:id="@+id/Vertex3"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginRight="90dp"
@@ -191,7 +191,7 @@
                     android:layout_marginTop="50dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex3"
+                    android:id="@+id/Vertex2"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="85dp"

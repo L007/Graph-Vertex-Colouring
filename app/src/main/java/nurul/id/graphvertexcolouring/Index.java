@@ -37,4 +37,8 @@ public class Index extends AppCompatActivity {
             }
         });
     }
+    @Override
+    public void onBackPressed() {
+       finishAffinity();
+    }
 }

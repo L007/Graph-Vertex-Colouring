@@ -15,13 +15,13 @@ import android.widget.TextView;
 public class Level3 extends AppCompatActivity {
     private Toolbar toolbar;
     final int KUNING = 1, BIRU = 2, MERAH = 3;
-    ImageButton vertex1, vertex2, vertex3, vertex4, vertex5;
+    ImageButton vertex1, vertex2, vertex3, vertex4, vertex5,vertex6;
     int warnaVertex1 = 1, warnaVertex2 = 1,
             warnaVertex3 = 1, warnaVertex4 = 1,
-            warnaVertex5 = 1, counter = 10000;
+            warnaVertex5 = 1,warnaVertex6=1, counter = 10000;
     TextView txtClick, txtStatus, txtClickLeft, txtTimer;
     SharedPreferences sharedPreferences;
-    int click = 4, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1, jumlahClickV5 = 1;
+    int click = 1, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1, jumlahClickV5 = 1, jumlahClickV6 = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +48,7 @@ public class Level3 extends AppCompatActivity {
         vertex3 = (ImageButton) findViewById(R.id.Vertex3);
         vertex4 = (ImageButton) findViewById(R.id.Vertex4);
         vertex5 = (ImageButton) findViewById(R.id.Vertex5);
+        vertex6 = (ImageButton) findViewById(R.id.Vertex6);
 
         txtClick = (TextView) findViewById(R.id.max_click);
         txtClickLeft = (TextView) findViewById(R.id.click_left);
@@ -104,6 +105,17 @@ public class Level3 extends AppCompatActivity {
 
             }
         });
+        vertex6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                btnClick(vertex6, jumlahClickV6);
+                warnaVertex6++;
+                jumlahClickV6++;
+                cekGraf();
+
+            }
+        });
+
         txtClickLeft.setText(String.valueOf(click).toString());
     }
 
@@ -143,89 +155,19 @@ public class Level3 extends AppCompatActivity {
         if (click == 0) {
 
             if ((
-                    warnaVertex1 == KUNING &&
-                            warnaVertex2 == BIRU &&
+                    warnaVertex1 == BIRU &&
+                            warnaVertex2 == KUNING &&
                             warnaVertex3 == KUNING &&
-                            warnaVertex4 == BIRU &&
-                            warnaVertex5 == MERAH
-            ) ||
-                    (
-                            warnaVertex1 == BIRU &&
-                                    warnaVertex2 == KUNING &&
-                                    warnaVertex3 == BIRU &&
-                                    warnaVertex4 == KUNING &&
-                                    warnaVertex5 == MERAH
-                    )
-                    ||
-                    (
-                            warnaVertex1 == MERAH &&
-                                    warnaVertex2 == BIRU &&
-                                    warnaVertex3 == KUNING &&
-                                    warnaVertex4 == BIRU &&
-                                    warnaVertex5 == KUNING
-                    )
-                    ||
-                    (
-                            warnaVertex1 == MERAH &&
-                                    warnaVertex2 == KUNING &&
-                                    warnaVertex3 == BIRU &&
-                                    warnaVertex4 == KUNING &&
-                                    warnaVertex5 == BIRU
-                    )
-                    ||
-                    (
-                            warnaVertex1 == BIRU &&
-                                    warnaVertex2 == MERAH &&
-                                    warnaVertex3 == KUNING &&
-                                    warnaVertex4 == BIRU &&
-                                    warnaVertex5 == KUNING
-                    )
-                    ||
-                    (
-                            warnaVertex1 == KUNING &&
-                                    warnaVertex2 == MERAH &&
-                                    warnaVertex3 == BIRU &&
-                                    warnaVertex4 == KUNING &&
-                                    warnaVertex5 == BIRU
-                    )
-                    ||
-                    (
-                            warnaVertex1 == KUNING &&
-                                    warnaVertex2 == BIRU &&
-                                    warnaVertex3 == MERAH &&
-                                    warnaVertex4 == KUNING &&
-                                    warnaVertex5 == BIRU
-                    )
-                    ||
-                    (
-                            warnaVertex1 == BIRU &&
-                                    warnaVertex2 == KUNING &&
-                                    warnaVertex3 == MERAH &&
-                                    warnaVertex4 == BIRU &&
-                                    warnaVertex5 == KUNING
-                    )
-                    ||
-                    (
-                            warnaVertex1 == BIRU &&
-                                    warnaVertex2 == KUNING &&
-                                    warnaVertex3 == BIRU &&
-                                    warnaVertex4 == MERAH &&
-                                    warnaVertex5 == KUNING
-                    )
-                    ||
-                    (
-                            warnaVertex1 == KUNING &&
-                                    warnaVertex2 == BIRU &&
-                                    warnaVertex3 == KUNING &&
-                                    warnaVertex4 == MERAH &&
-                                    warnaVertex5 == BIRU
-                    )
+                            warnaVertex4 == KUNING &&
+                            warnaVertex5 == KUNING &&
+                            warnaVertex6 == KUNING
+            )
                     ) {
                 ubahStatus();
-                // txtStatus.setText("Awesome");
+                 txtStatus.setText("Awesome");
                 nextDialog();
             } else {
-                //txtStatus.setText("Too much click");
+                txtStatus.setText("Too much click");
                 retryDialog();
             }
 
@@ -313,8 +255,15 @@ public class Level3 extends AppCompatActivity {
             public void onFinish() {
                 txtTimer.setText("Time is Out");
                 timeoutDialog();
+                cancel();
             }
 
         }.start();
+    }
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(Level3.this, MainActivity.class);
+        startActivity(i);
+        finish();
     }
 }

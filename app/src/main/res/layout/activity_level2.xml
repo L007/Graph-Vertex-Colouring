@@ -188,14 +188,14 @@
                     android:layout_marginTop="150dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex2"
+                    android:id="@+id/Vertex3"
                     android:layout_centerHorizontal="true"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginTop="150dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex3"
+                    android:id="@+id/Vertex5"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginRight="40dp"
@@ -203,13 +203,13 @@
                     android:layout_marginTop="150dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex4"
+                    android:id="@+id/Vertex2"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="100dp"
                     android:background="@drawable/yellow" />
                 <ImageButton
-                    android:id="@+id/Vertex5"
+                    android:id="@+id/Vertex4"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginRight="100dp"

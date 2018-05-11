@@ -21,7 +21,7 @@ public class Level6 extends AppCompatActivity {
             warnaVertex3 = 1, warnaVertex4 = 1, warnaVertex5 = 1,
             warnaVertex6 = 1, warnaVertex7 = 1, counter = 10000;
     TextView txtClick, txtStatus, txtClickLeft, txtTimer;
-    int click = 1, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1, jumlahClickV5 = 1, jumlahClickV6 = 1, jumlahClickV7 = 1;
+    int click = 2, jumlahClickV1 = 1, jumlahClickV2 = 1, jumlahClickV3 = 1, jumlahClickV4 = 1, jumlahClickV5 = 1, jumlahClickV6 = 1, jumlahClickV7 = 1;
     SharedPreferences sharedPreferences;
 
     @Override
@@ -165,20 +165,20 @@ public class Level6 extends AppCompatActivity {
 
             if ((
                     warnaVertex1 == KUNING &&
-                            warnaVertex2 == KUNING &&
+                            warnaVertex2 == BIRU &&
                             warnaVertex3 == KUNING &&
-                            warnaVertex4 == KUNING &&
+                            warnaVertex4 == BIRU &&
                             warnaVertex5 == KUNING &&
                             warnaVertex6 == KUNING &&
-                            warnaVertex7 == BIRU
+                            warnaVertex7 == KUNING
 
             )
                     ) {
                 ubahStatus();
-//                txtStatus.setText("Awesome");
+               txtStatus.setText("Awesome");
                 nextDialog();
             } else {
-//                txtStatus.setText("Too much click");
+              txtStatus.setText("Too much click");
                 retryDialog();
             }
 
@@ -265,8 +265,15 @@ public class Level6 extends AppCompatActivity {
             public void onFinish() {
                 txtTimer.setText("Time is Out");
                 timeoutDialog();
+                cancel();
             }
 
         }.start();
+    }
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(Level6.this, MainActivity.class);
+        startActivity(i);
+        finish();
     }
 }
