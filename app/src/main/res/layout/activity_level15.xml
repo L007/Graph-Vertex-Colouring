@@ -55,7 +55,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="TIME : "
+                            android:text="Waktu : "
                             android:textColor="#000"
                             android:textSize="20dp" />
 
@@ -85,7 +85,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Color : "
+                            android:text="Warna : "
                             android:textColor="#000"
                             android:textSize="20dp" />
 
@@ -117,7 +117,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Maximum Click : 2"
+                        android:text="Maksimal klik : 2"
                         android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="20dp" />
@@ -132,7 +132,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Clicks Left :"
+                            android:text="Sisa klik :"
                             android:textColor="#000"
                             android:textSize="20dp" />
 

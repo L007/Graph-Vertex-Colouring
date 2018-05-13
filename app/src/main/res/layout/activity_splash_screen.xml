@@ -24,13 +24,5 @@
         android:layout_marginTop="50dp"
         android:progressBackgroundTint="#FFF"
         android:progressTint="#FFF"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="COPYRIGHT NURUL FKIP"
-        android:textColor="#fff"
-        android:textSize="15dp"
-        android:textAlignment="center"
-        android:layout_marginTop="80dp"/>
 
 </LinearLayout>

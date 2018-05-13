@@ -11,4 +11,52 @@
         android:id="@+id/appBar"
         layout="@layout/app_bar" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Tentang Perangkat"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Aplikasi ini dikembangkan oleh Nurul Fatkhiyyah"
+            android:textColor="#000"
+            android:textSize="15.5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Pembuatan dan perancangan aplikasi ini menggunakan aplikasi Android Studio.
+Aplikasi yang dihasilkan memuat materi serta soal-soal mengenai pewarnaan titik pada graf yang dikemas dalam bentuk permainan."
+            android:textColor="#000"
+            android:textSize="15.5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Aplikasi ini memungkinkan untuk dijalankan oleh pengguna android versi ice cream sandwich hingga oreo"
+            android:textColor="#000"
+            android:textSize="15.5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Untuk informasi lebih lanjut, silahkan menghubungi kami melalui email Nurulfatkhiyyah6@gmail.com"
+            android:textColor="#000"
+            android:textSize="15.5dp" />
+    </LinearLayout>
 </LinearLayout>
