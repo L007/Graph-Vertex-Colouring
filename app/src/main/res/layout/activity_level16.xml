@@ -116,7 +116,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:text="Maksimal klik : 2"
+                        android:text="Maksimal klik : 4"
                         android:textAlignment="center"
                         android:textColor="#000"
                         android:textSize="20dp" />
@@ -205,7 +205,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex2"
+                    android:id="@+id/Vertex5"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="135dp"
@@ -213,7 +213,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex3"
+                    android:id="@+id/Vertex4"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="82.5dp"
@@ -221,7 +221,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex4"
+                    android:id="@+id/Vertex3"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_marginLeft="30dp"
@@ -229,15 +229,16 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex5"
+                    android:id="@+id/Vertex9"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:layout_marginLeft="82.5dp"
-                    android:layout_marginTop="145dp"
+                    android:layout_alignLeft="@+id/Vertex4"
+                    android:layout_alignStart="@+id/Vertex4"
+                    android:layout_alignTop="@+id/Vertex10"
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex6"
+                    android:id="@+id/Vertex2"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_alignParentRight="true"
@@ -246,7 +247,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex7"
+                    android:id="@+id/Vertex6"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_alignParentRight="true"
@@ -255,7 +256,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex8"
+                    android:id="@+id/Vertex7"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_alignParentRight="true"
@@ -264,7 +265,7 @@
                     android:background="@drawable/yellow" />
 
                 <ImageButton
-                    android:id="@+id/Vertex9"
+                    android:id="@+id/Vertex8"
                     android:layout_width="35dp"
                     android:layout_height="35dp"
                     android:layout_alignParentRight="true"
