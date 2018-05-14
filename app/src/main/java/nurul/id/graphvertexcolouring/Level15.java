@@ -267,17 +267,17 @@ public class Level15 extends AppCompatActivity {
 
                     )
                     ) {
-                txtStatus.setText("Awesome");
+                txtStatus.setText("KEREN !!");
                 nextDialog();
-            } else {
                 ubahStatus();
-                txtStatus.setText("Too much click");
+            } else {
+                txtStatus.setText("Terlalu Banyak Klik !!");
                 retryDialog();
             }
 
 
         } /*else {
-            txtStatus.setText("Too much click");
+            txtStatus.setText("Terlalu Banyak Klik !!");
         }*/
     }
 
@@ -347,16 +347,16 @@ public class Level15 extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 txtTimer.setText(String.valueOf(millisUntilFinished / 1000));
                 //count--;
-                if (txtStatus.getText().equals("Awesome")) {
+                if (txtStatus.getText().equals("KEREN !!")) {
                     cancel();
-                } else if (txtStatus.getText().equals("Too much click")) {
+                } else if (txtStatus.getText().equals("Terlalu Banyak Klik !!")) {
                     cancel();
                 }
             }
 
             @Override
             public void onFinish() {
-                txtTimer.setText("Time is Out");
+                txtTimer.setText("Waktu Habis !!");
                 timeoutDialog();
                 cancel();
             }
