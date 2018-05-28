@@ -15,6 +15,15 @@
         android:textSize="30dp"
         android:textColor="#000"
         android:textAlignment="center"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/score"
+        android:text=""
+        android:textSize="30dp"
+        android:textColor="#000"
+        android:textAlignment="center"/>
     <Button
         android:id="@+id/nextButton"
         android:textColor="#FFF"
