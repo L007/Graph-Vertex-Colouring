@@ -154,6 +154,8 @@ public class Level12 extends AppCompatActivity {
     }
 
     public void cekGraf() {
+        sharedPreferences = getApplicationContext().getSharedPreferences("level", 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         if (click == 0) {
             if (
                     (  warnaVertex1 == KUNING &&
@@ -177,6 +179,17 @@ public class Level12 extends AppCompatActivity {
 
             {
                 ubahStatus();
+                int currentScore = sharedPreferences.getInt("currentScore",0);
+                currentScore+=5;
+                int highestScore = sharedPreferences.getInt("highestScore", 0);
+
+                editor.putInt("currentScore", currentScore);
+                editor.commit();
+
+                if (currentScore > highestScore) {
+                    editor.putInt("highestScore", currentScore);
+                    editor.commit();
+                }
                 txtStatus.setText("KEREN !!");
                 nextDialog();
             } else {
@@ -191,9 +204,16 @@ public class Level12 extends AppCompatActivity {
     }
 
     private void nextDialog() {
+        sharedPreferences = getApplicationContext().getSharedPreferences("level", 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int currentScore = sharedPreferences.getInt("currentScore",0);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(Level12.this);
         View view = getLayoutInflater().inflate(R.layout.dialog_next, null);
         Button dialogButton = (Button) view.findViewById(R.id.nextButton);
+        TextView txtScore = (TextView)view.findViewById(R.id.score);
+
+        txtScore.setText("Skor anda : "+String.valueOf(currentScore));
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -207,14 +227,29 @@ public class Level12 extends AppCompatActivity {
     }
 
     private void retryDialog() {
+        sharedPreferences = getApplicationContext().getSharedPreferences("level", 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int currentScore = sharedPreferences.getInt("currentScore",0);
+
+
         AlertDialog.Builder builder = new AlertDialog.Builder(Level12.this);
         View view = getLayoutInflater().inflate(R.layout.dialog_retry, null);
         Button dialogButton = (Button) view.findViewById(R.id.retryButton);
+
+        TextView txtScore = (TextView)view.findViewById(R.id.score);
+
+        txtScore.setText("Skor anda : "+String.valueOf(currentScore));
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                sharedPreferences = getApplicationContext().getSharedPreferences("level", 0);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putInt("currentScore", 0);
+                editor.commit();
                 Intent i = new Intent(Level12.this, Level12.class);
                 startActivity(i);
+                finish();
             }
         });
         builder.setView(view);
@@ -223,12 +258,27 @@ public class Level12 extends AppCompatActivity {
     }
 
     private void timeoutDialog() {
+        sharedPreferences = getApplicationContext().getSharedPreferences("level", 0);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        int currentScore = sharedPreferences.getInt("currentScore",0);
+
         AlertDialog.Builder builder = new AlertDialog.Builder(Level12.this);
         View view = getLayoutInflater().inflate(R.layout.dialog_time_out, null);
         Button dialogButton = (Button) view.findViewById(R.id.retryButton);
+
+        TextView txtScore = (TextView)view.findViewById(R.id.score);
+
+        txtScore.setText("Skor anda : "+String.valueOf(currentScore));
+
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+
+                sharedPreferences = getApplicationContext().getSharedPreferences("level", 0);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putInt("currentScore", 0);
+                editor.commit();
                 Intent i = new Intent(Level12.this, Level12.class);
                 startActivity(i);
             }

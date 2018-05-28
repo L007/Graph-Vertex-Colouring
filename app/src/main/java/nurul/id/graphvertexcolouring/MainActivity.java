@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import java.lang.reflect.Array;
 
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
     Button arrBtn [] = new Button[21];
     Boolean arrLevel[] = new Boolean[21];
     Boolean arrStatus[] = new Boolean[21];
+    int currentScore=0,highestScore=0;
+    TextView score;
 
     SharedPreferences sharedPreferences;
 
@@ -201,6 +204,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        score = (TextView)findViewById(R.id.nilai);
+
         arrBtn[1]=lv1;
         arrBtn[2]=lv2;
         arrBtn[3]=lv3;
@@ -232,6 +237,15 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean("level_"+1,true);
         editor.commit();
+
+        highestScore = sharedPreferences.getInt("highestScore",0);
+        currentScore = 0;//sharedPreferences.getInt("currentScore",0);
+
+        editor.putInt("currentScore",0);
+        editor.commit();
+
+        score.setText("Nilai Tertinggi : "+highestScore);
+
 
         for (int i = 1;i<arrLevel.length;i++){
             arrLevel[i]=sharedPreferences.getBoolean("level_"+i,false);
