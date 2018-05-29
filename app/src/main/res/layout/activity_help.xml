@@ -120,12 +120,12 @@ Graf awal memiliki titik berwarna kuning. Ketika dilakukan pewarnaan, salah satu
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dalam setiap level terdapat keterangan Time, Color, Maksimum Clicks, dan Click Left.
+                android:text="Dalam setiap level terdapat keterangan Waktu, Warna, Maksimal Klik, dan Sisa klik.
 
-Time (Waktu)
+Waktu
 Menunjukkan batas waktu untuk menyelesaikan pewarnaan titik dalam suatu level. Ketika waktu telah habis sebelum kalian menyelesaikan pewarnaan tersebut, permainan akan terhenti.
 
-Color (Warna)
+Warna
 Menunjukkan warna yang digunakan dalam mewarnai suatu graf. Pada setiap level permainan, pasti kalian akan menemukan logo warna seperti di bawah ini :
 "
                 android:textColor="#000"
@@ -251,10 +251,10 @@ Sedangkan ketika dalam suatu level terdapat tiga warna (kuning, biru, merah), ar
                 android:layout_height="wrap_content"
                 android:textSize="16dp"
                 android:textColor="#000"
-                android:text="Maximum Clicks (Klik Maksimum)
+                android:text="Maksimal Klik
 Menunjukkan jumlah batas maksimum klik. Kalian hanya bisa mengklik titik pada graf sebanyak jumlah maximum clicks, selebihnya secara otomatis titik pada graf tidak dapat diklik kembali.
 
-Clicks Left (Klik yang Tersisa)
+Sisa Klik
 Menunjukkan sisa dari jumlah klik maksimum. Ketika kalian menekan titik pada graf dengan satu kali klik, maka Click Left akan berkurang satu. Semakin banyak klik yang kalian gunakan, semakin sedikit klik yang kalian miliki. Apabila klik yang kalian miliki telah habis atau Click Left menunjukkan jumlah 0, maka permainan akan terhenti.
 "/>
         </LinearLayout>
