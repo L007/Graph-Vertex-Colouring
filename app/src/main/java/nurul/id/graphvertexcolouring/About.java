@@ -13,7 +13,7 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.activity_about);
         toolbar = (Toolbar) findViewById(R.id.appBar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("About");
+        getSupportActionBar().setTitle("Tentang");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

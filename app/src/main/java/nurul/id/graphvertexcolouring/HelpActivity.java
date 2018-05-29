@@ -13,7 +13,7 @@ public class HelpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_help);
         toolbar = (Toolbar) findViewById(R.id.appBar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Help");
+        getSupportActionBar().setTitle("Bantuan");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
